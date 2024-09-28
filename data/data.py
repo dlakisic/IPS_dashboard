@@ -17,7 +17,7 @@ def get_csv(url, filename):
 
 # ---- PRIMAIRE ----
 url_pri = "https://www.data.gouv.fr/fr/datasets/r/896c2e97-6a64-4521-bcab-b5b0d3cf7065"
-filename_pri = "fr-en-ips-ecoles-ap2022.csv"
+filename_pri = "./data/fr-en-ips-ecoles-ap2022.csv"
 
 data_pri = get_csv(url=url_pri, filename=filename_pri)
 
@@ -27,7 +27,7 @@ data_pri["niveau"] = "Primaire"
 
 # ---- COLLÈGES ----
 url_coll = "https://www.data.gouv.fr/fr/datasets/r/28e511a7-af0d-48c7-a8bb-2f38ec003f49"
-filename_coll = "fr-en-ips-colleges-ap2022.csv"
+filename_coll = "./data/fr-en-ips-colleges-ap2022.csv"
 
 data_coll = get_csv(url=url_coll, filename=filename_coll)
 
@@ -36,7 +36,7 @@ data_coll["niveau"] = "Collège"
 
 # ---- LYCÉES ----
 url_lycee = "https://www.data.gouv.fr/fr/datasets/r/df2cbcb3-da0a-4265-a24e-c36f2c787db2"
-filename_lycee = "fr-en-ips-lycees-ap2022.csv"
+filename_lycee = "./data/fr-en-ips-lycees-ap2022.csv"
 
 data_lycee = get_csv(url=url_lycee, filename=filename_lycee)
 
@@ -47,7 +47,7 @@ data_lycee["niveau"] = "Lycée"
 
 # ---- GÉOLOC ----
 url_geo = "https://www.data.gouv.fr/fr/datasets/r/b3b26ad1-a143-4651-afd6-dde3908196fc"
-filename_geo = "fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre.csv"
+filename_geo = "./data/fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre.csv"
 
 df_geo = get_csv(url=url_geo, filename=filename_geo)
 

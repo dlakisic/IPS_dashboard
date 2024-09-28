@@ -17,43 +17,82 @@ st.title("Accueil")
 
 # ---- CONTACT ----
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(current_dir, "Dino carré.jpg")
+current_dir = os.getcwd()
+image_path = os.path.join(current_dir, "Dino_carré.png")
+image_url = "https://media.licdn.com/dms/image/C4D03AQHhaTl4QT42ug/profile-displayphoto-shrink_400_400/0/1612262833161?e=1692835200&v=beta&t=3CktyzxF6FdYgKXtb7QrEB4B2ojs0N2ty1OLwMOksWU"
 
 st.sidebar.markdown(
     """
+    <style>
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sidebar-image {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 20px 0;
+    }
+    .sidebar-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .sidebar-subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .contact-button {
+        background-color: #1D2951;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 10px;
+    }
+    .contact-section img {
+        margin-top: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    </style>
     <div class="sidebar-content">
-        <div style="display: flex; align-items: center;">
-            <img class="sidebar-image" style="border-radius: 50%; width: 75px; margin-right: 20px;" src="{}">
-            <div>
-                <div class="sidebar-title">Dino LAKISIC</div>
-                <div class="sidebar-subtitle" style="margin-bottom: 10px;">Data Manager</div>
-            </div>
-        </div>
-        <div class="sidebar-section" style="text-align: center;">
+        <div class="sidebar-title">Dino LAKISIC</div>
+        <img class="sidebar-image" src="https://media.licdn.com/dms/image/v2/C4D03AQHhaTl4QT42ug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1612262834996?e=1730332800&v=beta&t=wpDPvARUrfMvugXlP2YwLeACf06ZqD66ygasjj-RFm4">
+        <div class="sidebar-subtitle">Data Manager</div>
+        <div class="contact-section">
             <div style="font-size: 18px; font-weight: bold;">Contacts</div>
-            <div style="margin-top: 10px;">
+            <div>
                 <a href="https://www.linkedin.com/in/dino-lakisic/">
-                    <img class="sidebar-image" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); margin-left: 0mm;" src="https://img.shields.io/badge/Dino%20LAKISIC-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/dino-lakisic/">
+                    <img src="https://img.shields.io/badge/Dino%20LAKISIC-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/dino-lakisic/">
                 </a>
             </div>
-            <div style="margin-top: 10px;">
+            <div>
                 <a href="https://github.com/dlakisic">
-                    <img class="sidebar-image" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); margin-left: 0mm;" src="https://img.shields.io/badge/Dino%20LAKISIC-100000?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/dlakisic">
+                    <img src="https://img.shields.io/badge/Dino%20LAKISIC-100000?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/dlakisic">
                 </a>
             </div>
-            <div style="margin-top: 10px;">
+            <div>
                 <a href="mailto:dino.lakisic@efrei.net">
-                    <button style="background-color: #1D2951; border: none; color: white; padding: 8px 16px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);">Contactez-moi par e-mail</button>
+                    <button class="contact-button">Contactez-moi par e-mail</button>
                 </a>
             </div>
         </div>
     </div>
-    """.format(image_path),
-    unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-image_url = "https://media.licdn.com/dms/image/C4D03AQHhaTl4QT42ug/profile-displayphoto-shrink_400_400/0/1612262833161?e=1692835200&v=beta&t=3CktyzxF6FdYgKXtb7QrEB4B2ojs0N2ty1OLwMOksWU"
-st.sidebar.image(image_url, width=200, caption="Dino Lakisic")
+
+
 
 
 st.title("Description")
